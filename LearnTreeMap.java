@@ -1,14 +1,14 @@
 package Collection_Framework;
 
-import java.util.HashMap;
+import java.util.TreeMap;
 import java.util.Map;
 
-public class LearnMap {
+public class LearnTreeMap {
     public static void main(String[] args) {
         
-        // No sorting
-        Map<String, Integer> numbers = new HashMap<>();
-        
+        // Store in sorting order by keys
+        Map<String, Integer> numbers = new TreeMap<>();
+
         numbers.put("One", 1);
         numbers.put("Two", 2);
         numbers.put("Three", 3);
@@ -18,7 +18,7 @@ public class LearnMap {
         // if (!numbers.containsKey("Two")) {
         //     numbers.put("Two", 23);
         // }
-        
+        // numbers.remove(30);
         numbers.putIfAbsent("Two", 23);
 
         // numbers.clear();
@@ -38,6 +38,5 @@ public class LearnMap {
         for (Integer value: numbers.values()) {
             System.out.println( value );
         }
-
     }
 }
